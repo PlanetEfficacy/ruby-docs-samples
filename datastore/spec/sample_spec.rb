@@ -19,7 +19,7 @@ describe "Datastore sample" do
   attr_reader :datastore
 
   before :all do
-    @gcloud = Gcloud.new
+    @gcloud = Gcloud.new ENV["GOOGLE_PROJECT_ID"]
     @datastore = @gcloud.datastore
 
     task_list = datastore.entity "TaskList", "default"
