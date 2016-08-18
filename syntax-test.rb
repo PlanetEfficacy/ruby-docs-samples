@@ -92,3 +92,48 @@ bucket.delete
 
 puts "Deleted bucket: #{bucket.name}"
 # [END only_variable_comments]
+
+# [START param_comments]
+# project_id:  Your Google Cloud project ID
+# bucket_name: Your Google Cloud Storage bucket name
+
+require "gcloud"
+
+gcloud  = Gcloud.new project_id
+storage = gcloud.storage
+bucket  = storage.bucket bucket_name
+
+bucket.delete
+
+puts "Deleted bucket: #{bucket.name}"
+# [END param_comments]
+
+# [START constant_comments]
+# PROJECT_ID:  Your Google Cloud project ID
+# BUCKET_NAME: Your Google Cloud Storage bucket name
+
+require "gcloud"
+
+gcloud  = Gcloud.new PROJECT_ID
+storage = gcloud.storage
+bucket  = storage.bucket BUCKET_NAME
+
+bucket.delete
+
+puts "Deleted bucket: #{bucket.name}"
+# [END constant_comments]
+
+# [START global_comments]
+# $PROJECT_ID:  Your Google Cloud project ID
+# $BUCKET_NAME: Your Google Cloud Storage bucket name
+
+require "gcloud"
+
+gcloud  = Gcloud.new $PROJECT_ID
+storage = gcloud.storage
+bucket  = storage.bucket $BUCKET_NAME
+
+bucket.delete
+
+puts "Deleted bucket: #{bucket.name}"
+# [END global_comments]
