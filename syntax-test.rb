@@ -46,3 +46,19 @@ bucket.delete
 
 puts "Deleted bucket: #{bucket.name}"
 # [END globals]
+
+# [START described_params]
+require "gcloud"
+
+# Replace these placeholders with your values
+project_id  = YOUR_PROJECT_ID
+bucket_name = YOUR_BUCKET_NAME
+
+gcloud  = Gcloud.new project_id
+storage = gcloud.storage
+bucket  = storage.bucket bucket_name
+
+bucket.delete
+
+puts "Deleted bucket: #{bucket.name}"
+# [END described_params]
