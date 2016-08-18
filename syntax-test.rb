@@ -32,8 +32,7 @@ bucket  = storage.bucket YOUR_BUCKET_NAME
 bucket.delete
 
 puts "Deleted bucket: #{bucket.name}"
-# [END contants]
-
+# [END constants]
 
 # [START globals]
 require "gcloud"
